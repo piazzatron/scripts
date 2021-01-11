@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+# Must download:
+# https://github.com/AlexanderWillner/things.sh
+
 # Get a random article
 ARTICLE=$(things.sh all | grep "Articles and Videos" | sort -R | head -n 1)
 
@@ -32,13 +35,3 @@ BODY="
   echo
   echo $BODY
 ) | sendmail -t
-# echo "Your article of the day!
-
-#   $TITLE
-#   <a>$LINK</a>
-
-#   w love,
-#   - you
-# " | mail -a="Content-type: text/html" -s "$SUBJECT" "michael.piazza@hey.com"
-
-
